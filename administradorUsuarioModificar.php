@@ -6,34 +6,9 @@ session_start();
 	header("location: index.php");                                  
 	}
 ?>
-<html>
-<head>
-	<title>Registro</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css" >
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css" >
-	<link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
-	<nav class="navbar navbar-inverse">
-		<div class="container-fluid">
-    		<div class="navbar-header">
-        		<a class="navbar-brand" href="#">Help Desk</a>
-        	</div>
-        	<ul class="nav navbar-nav">
-                <li><a href="administradorIndex.php"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
-				<li class="active"><a href="administradorUsuarioNuevo.php"><span class="glyphicon glyphicon-user"></span> Crear Usuario</a></li>
-				<li><a href="administradorUsuarioHistorial.php"> Usuarios</a></li>
-				<li><a href="administradorTicketNuevo.php"><span class="glyphicon glyphicon-edit"></span> Abrir Ticket</a></li>
-				<li><a href="administradorTicketAbierto.php"><span class="glyphicon glyphicon-edit"></span> Tickets Abiertos</a></li>
-				<li><a href="administradorTicketCerrado.php"><span class="glyphicon glyphicon-check"></span> Tickets Cerrados</a></li>
-				<li><a href="administradorTicketHistorial.php"> Tickets Historial</a></li>
-        	</ul>
-        	<ul class="nav navbar-nav navbar-right">
-				<li class=""><a><?php echo $_SESSION["tipo_usuario"]?>: <?php echo $_SESSION['u_usuario']?></a></li>
-				<li><a href="metodos/cerrarSesion.php"><span class="glyphicon glyphicon-log-in"></span> Salir </a></li>
-			</ul>
-        </div>
-	</nav>
+<?php require_once './secciones/header.php';?>
+     <?php require_once './secciones/navAdmin.php';?>
+
 	<div class="container">
 		<div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
 			<div class="panel panel-info">
@@ -124,6 +99,6 @@ session_start();
 			</div>
 		</div>
 	</div>
-	<script src="js/bootstrap.min.js"></script>
-</body>
-</html>	
+	<?php require_once './secciones/footer.php';?>
+   
+	

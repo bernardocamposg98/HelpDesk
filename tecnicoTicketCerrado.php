@@ -6,36 +6,8 @@ session_start();
 header("location: index.php");                                  
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css" >
-    <link rel ="stylesheet" href="css/estilos.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>Tickets Cerrados</title>
-</head>
-<body>
-	<nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Help Desk</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li><a href="tecnicoIndex.php"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
-                <li><a href="tecnicoTicketAbierto.php"><span class="glyphicon glyphicon-folder-open"></span> Tickets Abiertos</a></li>
-                <li class="active"><a href="tecnicoTicketCerrado.php"><span class="glyphicon glyphicon-check"></span> Tickets Cerrados</a></li></ul>
-            <ul class="nav navbar-nav navbar-right">
-				<li class=""><a><?php echo $_SESSION["tipo_usuario"]?>: <?php echo $_SESSION['u_usuario']?></a></li>
-				<li><a href="metodos/cerrarSesion.php"><span class="glyphicon glyphicon-log-in"></span> Salir </a></li>
-			</ul>
-        </div>
-    </nav>
+<?php require_once './secciones/header.php';?>
+     <?php require_once './secciones/navTecnico.php';?>
    
     <div class="container">
         <h1>Tickets Cerrados</h1>
@@ -69,5 +41,5 @@ header("location: index.php");
             <?php } ?>
         </table>       
     </div>
-</body>
-</html>
+<?php require_once './secciones/footer.php';?>
+    
