@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Login</title>
+    <title>Help Desk</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/tablas.css">

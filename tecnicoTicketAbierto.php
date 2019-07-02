@@ -40,6 +40,7 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Tecnico"){
 						</td>
 						<input type="hidden" name="id" value="<?php echo $fila['id']?>" >
 						<input type="hidden" name="usuario" value="<?php echo $_SESSION['nombre']; ?>" >
+						<input type="hidden" name="id_tecnico" value="<?php echo $_SESSION['id']; ?>" >
 						<td>
 							<button id="btn-signup" type="submit" class="btn btn-primary"><i value = "Guardar" ></i>Cerrar</button>
 						</td>

@@ -1,13 +1,48 @@
 <?php
-        session_start();
-          if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Usuario"){
-        }else{                             
-        header("location: index.php");                                  
-        }
+require_once ("conexion/conexion.php");
+session_start();
+  if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Usuario"){
+}else{                             
+header("location: index.php");                                  
+}
 ?>
 <?php require_once './secciones/header.php';?>
      <?php require_once './secciones/navUsuario.php';?>
-
+     <div class="container">
+        <h3>Mis Tickets </h3>
+        <table  class="table table-striped" id="tablatickets" >
+                <th>ID</th>
+                <th>Fecha de apertura</th>
+                <th>Usuario de apertura</th>
+                <th>Marca</th>
+                <th>Red</th>
+                <th>Nº de Equipo</th>
+                <th>Tipo de Problema</th>
+                <th>Problema</th>
+                <th>Finalizo</th>
+                <th>Técnico de respuesta</th>
+                <th>Respuesta</th>
+                <?php 
+                $id = $_SESSION["id"];
+                $sel = $con->query("SELECT*FROM tickets where id_usuario = $id");
+                while ($fila = $sel -> fetch_assoc()) {
+            ?>
+            <tr>
+                <td><?php echo $fila['id']?></td>
+                <td><?php echo $fila['fecha_inicio']?></td>
+                <td><?php echo $fila['nombre_usuario']?></td>
+                <td><?php echo $fila['marca']?></td>
+                <td><?php echo $fila['red']?></td>
+                <td><?php echo $fila['equipo']?></td>
+                <td><?php echo $fila['tipo_problema']?></td>
+                <td><?php echo $fila['problema']?></td>
+                <td><?php echo $fila['fecha_fin']?></td>
+                <td><?php echo $fila['nombre_tecnico']?></td>
+                <td><?php echo $fila['respuesta']?></td>
+            </tr>
+            <?php } ?>
+        </table>
+    </div>
 <script src="js/bootstrap.min.js" ></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
