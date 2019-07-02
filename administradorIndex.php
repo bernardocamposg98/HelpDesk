@@ -1,6 +1,6 @@
 <?php 
 session_start();
-    if(isset($_SESSION['u_usuario']) && $_SESSION["tipo_usuario"]=="Administrador"){
+    if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Administrador"){
 } else {                             
 header("location: index.php");                                  
 }       
@@ -11,5 +11,5 @@ header("location: index.php");
 	<div> 
 		<h1 class="text-center">Analisis General</h1>
 	</div>
-    <?php require_once './secciones/footer.php';?>
+<?php require_once './secciones/footer.php';?>
 

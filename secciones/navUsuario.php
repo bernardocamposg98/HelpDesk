@@ -11,21 +11,19 @@
                     Acciones <i class="fas fa-users"></i>
                 </a>
                 <div class="dropdown-menu">
-                    <a class="textnav dropdown-item" href="../HelpDesk/administradorUsuarioNuevo.php" data-toggle="tooltip" data-placement="bottom">Crear Usuario</a>
-                    <a class="textnav dropdown-item" href="../HelpDesk/administradorUsuarioHistorial.php" data-toggle="tooltip" data-placement="bottom">Usuarios</a>
-                    <a class="textnav dropdown-item" href="../HelpDesk/administradorTicketNuevo.php" data-toggle="tooltip" data-placement="bottom">Abrir Ticket</a>
-                    <a class="textnav dropdown-item" href="../HelpDesk/administradorTicketAbierto.php" data-toggle="tooltip" data-placement="bottom" >Tickets Abiertos</a>
-                    <a class="textnav dropdown-item" href="../HelpDesk/administradorTicketCerrado.php" data-toggle="tooltip" data-placement="bottom" >Tickets Cerrados</a>
-                    <a class="textnav dropdown-item" href="../HelpDesk/administradorTicketHistorial.php" data-toggle="tooltip" data-placement="bottom" >Tickets Historial</a>
+                    <a class="textnav dropdown-item" href="../HelpDesk/usuarioTicketAbierto.php" data-toggle="tooltip" data-placement="bottom" title="Nuestro Equipo">Tickets Abiertos</a>
+                    <a class="textnav dropdown-item" href="../HelpDesk/usuarioTicketNuevo.php" data-toggle="tooltip" data-placement="bottom" title="Nuestro Equipo">Abrir Ticket</a>
+                    <a class="textnav dropdown-item" href="../HelpDesk/usuarioTicketCerrado.php" data-toggle="tooltip" data-placement="bottom" title="Nuestro Equipo">Tickets Cerrados</a>
                 </div>
             </li>
         </div>
         <div class="navbar-nav ml-auto ">
             <a data-toggle="tooltip" data-placement="bottom" title="Usuario">
                 <a  class="textnav nav-item nav-link " data-toggle="tooltip" data-placement="bottom" title="Cerrar Sesión" href="../HelpDesk/metodos/cerrarSesion.php">
-                    <?php echo $_SESSION['usuario']?>
-                    <i  class="fas fa-sign-out-alt"></i>
-                </a> 
+                <?php echo $_SESSION['usuario']?>
+                <i  class="fas fa-sign-out-alt">
+                </i>
+                </a>   
             </a>
         </div>
     </div>

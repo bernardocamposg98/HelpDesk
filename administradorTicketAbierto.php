@@ -1,7 +1,7 @@
 <?php
 require_once ("conexion/conexion.php");
 session_start();
-if(isset($_SESSION['u_usuario']) && $_SESSION["tipo_usuario"]=="Administrador"){
+if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Administrador"){
     } else {                             
 	header("location: index.php");                                  
 }
@@ -26,8 +26,10 @@ if(isset($_SESSION['u_usuario']) && $_SESSION["tipo_usuario"]=="Administrador"){
                     <th>ID</th>
                     <th>Fecha de apertura</th>
                     <th>Usuario de apertura</th>
-                    <th>equipo</th>
-                    <th>red</th>
+                    <th>Equipo</th>
+                    <th>Marca</th>
+                    <th>Red</th>
+                    <th>Tipo de Problema</th>
                     <th>Problema</th>
                     <th>Respuesta</th>
                     <th>Cerrar</th>
@@ -35,22 +37,25 @@ if(isset($_SESSION['u_usuario']) && $_SESSION["tipo_usuario"]=="Administrador"){
                 </tr>
             </thead>
             <?php
-			$sel = $con->query("SELECT * FROM tickets WHERE finalizo IS NULL");
+			$sel = $con->query("SELECT * FROM tickets WHERE fecha_fin IS NULL");
 			while ($fila = $sel -> fetch_assoc()) {
 			?>
             <tr>
                 <td><?php echo $fila['id']?></td>
-                <td><?php echo $fila['fecha']?></td>
-                <td><?php echo $fila['usuario']?></td>
+                <td><?php echo $fila['fecha_inicio']?></td>
+                <td><?php echo $fila['nombre_usuario']?></td>
                 <td><?php echo $fila['equipo']?></td>
+                <td><?php echo $fila['marca']?></td>
                 <td><?php echo $fila['red']?></td>
+                <td><?php echo $fila['tipo_problema']?></td>
                 <td><?php echo $fila['problema']?></td>
                 <form action="metodos/administradorCerrarTicket.php" method="post">
                     <td>
-                        <textarea name="resp" rows="10" cols="40" style="margin: 0px; height: 55px; width: 287px;"></textarea>
+                        <textarea name="respuesta" rows="10" cols="40" style="margin: 0px; height: 55px; width: 287px;"></textarea>
                     </td>
                     <input type="hidden" name="id" value="<?php echo $fila['id']?>">
-                    <input type="hidden" name="usuario_a" value="<?php echo $_SESSION['u_usuario']; ?>">
+                    <input type="hidden" name="tecnico_id" value="<?php echo $_SESSION['id']; ?>">
+                    <input type="hidden" name="tecnico_nombre" value="<?php echo $_SESSION['nombre']; ?>">
                     <td>
                         <button id="btn-signup" type="submit" class="btn btn-danger"><i value="Guardar"></i>Cerrar</button>
                     </td>

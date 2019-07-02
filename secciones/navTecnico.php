@@ -12,17 +12,15 @@
                     Acciones <i class="fas fa-users"></i>
                 </a>
                 <div class="dropdown-menu">
-                    <a class="textnav dropdown-item" href="../tecnicoTicketAbierto.php" data-toggle="tooltip" data-placement="bottom" title="Nuestro Equipo">Tickets Abiertos</a>
-                    <a class="textnav dropdown-item" href="../tecnicoTicketCerrado.php" data-toggle="tooltip" data-placement="bottom" title="Nuestro Equipo">Tickets Cerrados</a>
+                    <a class="textnav dropdown-item" href="../HelpDesk/tecnicoTicketAbierto.php" data-toggle="tooltip" data-placement="bottom" title="Nuestro Equipo">Tickets Abiertos</a>
+                    <a class="textnav dropdown-item" href="../HelpDesk/tecnicoTicketCerrado.php" data-toggle="tooltip" data-placement="bottom" title="Nuestro Equipo">Tickets Cerrados</a>
                 </div>
             </li>
         </div>
-
-
         <div class="navbar-nav ml-auto ">
             <a data-toggle="tooltip" data-placement="bottom" title="Usuario">
-                <a  class="textnav nav-item nav-link " data-toggle="tooltip" data-placement="bottom" title="Cerrar Sesión" href="../metodos/cerrarSesion.php">
-                <?php echo $_SESSION['u_usuario']?>
+                <a  class="textnav nav-item nav-link " data-toggle="tooltip" data-placement="bottom" title="Cerrar Sesión" href="../HelpDesk/metodos/cerrarSesion.php">
+                <?php echo $_SESSION['usuario']?>
                 
                 <i  class="fas fa-sign-out-alt">
                 </i>

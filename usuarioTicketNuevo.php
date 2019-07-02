@@ -1,43 +1,13 @@
 <?php
 	require_once ("conexion/conexion.php"); 
 	session_start();
-		if(isset($_SESSION['u_usuario']) && $_SESSION["tipo_usuario"]=="Usuario"){
-		//echo $_SESSION['u_usuario'];
+		if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Usuario"){
 	}else{                             
 	header("location: index.php");                                  
 	}
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="css/bootstrap.min.css" >
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css" >
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/estilos.css">
-	<title>Abrir Ficha Nueva</title>
-</head>
-<body>
-	<nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Help Desk</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li><a href="usuarioIndex.php"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
-                <li class="active"><a onclick="alerta()" href="usuarioTicketNuevo.php"><span class="glyphicon glyphicon-edit"></span> Abrir ticket</a></li>
-                <li><a href="usuarioTicketCerrado.php"><span class="glyphicon glyphicon-check"></span> Tickets Cerrados</a></li>
-                <li><a href="usuarioTicketAbierto.php"><span class="glyphicon glyphicon-folder-open"></span> Tickets Abiertos</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-				<li class=""><a><?php echo $_SESSION["tipo_usuario"]?>: <?php echo $_SESSION['u_usuario']?></a></li>
-				<li><a href="metodos/cerrarSesion.php"><span class="glyphicon glyphicon-log-in"></span> Salir </a></li>
-			</ul>
-        </div>
-    </nav>
+<?php require_once './secciones/header.php';?>
+    <?php require_once './secciones/navUsuario.php';?>
 	<div class="container">
 		<div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
 			<div class="panel panel-info">
@@ -48,12 +18,23 @@
 					<form action ="metodos/guardarTicketNuevo.php" method="post">
 						<div class="col-md-12">
 							<label class="col-md-3 control-label" nombre="nombreusuario" >Nombre:</label>
-							<label class="col-md-9 control-label" nombre="nombreusuario" ><?php echo $_SESSION['u_usuario']?></label>
+							<label class="col-md-5 control-label" nombre="nombreusuario" ><?php echo $_SESSION['nombre']?></label>
 						</div>
-						<input type="hidden" name="u_user" value="<?php echo $_SESSION['u_usuario']; ?>"/>
+						<input type="hidden" name="nombre_usuario" value="<?php echo $_SESSION['nombre']; ?>"/>
+						<input type="hidden" name="id_usuario" value="<?php echo $_SESSION['id']; ?>"/>
 						<div class="col-md-12">
 							<label for="marca" class="col-md-3 control-label">Marca:</label>
-							<input class="col-md-2" type="text" maxlength="30" name="marca"/>
+							<select name="marca">
+								<option value="Acer">Acer</option>
+								<option value="Asus">Asus</option>
+								<option value="Apple">Apple</option>
+								<option value="Lenovo">Lenovo</option>
+								<option value="Dell">Dell</option>
+								<option value="HP">HP</option>
+								<option value="Toshiba">Toshiba</option>
+								<option value="Samsung">Samsung</option>
+								<option value="Otro">Otro</option>
+							</select>
 						</div>
 						<div class="col-md-12">
 							<label for="equipo" class="col-md-3 control-label">Nº de Equipo:</label>
@@ -64,8 +45,17 @@
 							<input class="col-md-3" type="text" maxlength="30" name="red"/>
 						</div>
 						<div class="col-md-12">
+							<label for="tipo_problema" class="col-md-3 control-label">Tipo de Problema:</label>
+							<select name="tipo_problema">
+								<option value="Software">Software</option>
+								<option value="Hardware">Hardware</option>
+								<option value="Red">Red</option>
+								<option value="Otro">Otro</option>
+							</select>
+						</div>
+						<div class="col-md-12">
 							<label for="Problema" class="col-md-3 control-label">Problema:</label>
-							<textarea name="descprob" rows="10" cols="40" required></textarea>
+							<textarea name="problema" rows="10" cols="40" required></textarea>
 						</div>  						
 						<div class="form-group">
 							<div class="col-md-offset-3 col-md-9">
@@ -77,8 +67,4 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script src="js/bootstrap.min.js" ></script>
-</body>
-</html>
+	<?php require_once './secciones/footer.php';?>

@@ -1,13 +1,14 @@
 <?php
 require_once ("../conexion/conexion.php");
-$resp = $_POST['resp'];
+$respuesta = $_POST['respuesta'];
 $id = $_POST['id'];
-$usuario_a =$_POST['usuario_a'];
+$usuario =$_POST['usuario'];
+
 
 if(!$con){
     die("Falló ". mysqli_connect_error());
 }else{
-    $query = "UPDATE tickets SET respuesta='".$resp. "',usuarioresp='".$usuario_a."' WHERE id=$id";
+    $query = "UPDATE tickets SET respuesta='".$respuesta. "',nombre_tecnico='".$usuario."' WHERE id=$id";
     $result = mysqli_query($con, $query);
 }
 if ($query) {

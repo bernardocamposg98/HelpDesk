@@ -1,7 +1,7 @@
 <?php
-	require_once ("conexion/conexion.php"); 
+	require_once ("./conexion/conexion.php"); 
 	session_start();
-		if(isset($_SESSION['u_usuario']) && $_SESSION["tipo_usuario"]=="Administrador"){
+		if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Administrador"){
 	}else{                             
 	header("location: index.php");                                  
 	}
@@ -18,13 +18,24 @@
 				<div class="panel-body">
 					<form action ="metodos/administradorGuardarTicketNuevo.php" method="post">
 						<div class="col-md-12">
-							<label class="col-md-3 control-label" nombre="nombreusuario" >Nombre:</label>
-							<label class="col-md-9 control-label" nombre="nombreusuario" ><?php echo $_SESSION['u_usuario']?></label>
+							<label class="col-md-3 control-label" nombre="nombreusuario">Nombre:</label>
+							<label class="col-md-6 control-label" nombre="nombreusuario"><?php echo $_SESSION['nombre']?></label>
 						</div>
-						<input type="hidden" name="u_user" value="<?php echo $_SESSION['u_usuario']; ?>"/>
+						<input type="hidden" name="nombre_usuario" value="<?php echo $_SESSION['nombre']; ?>"/>
+						<input type="hidden" name="id_usuario" value="<?php echo $_SESSION['id']; ?>"/>
 						<div class="col-md-12">
 							<label for="marca" class="col-md-3 control-label">Marca:</label>
-							<input class="col-md-2" type="text" maxlength="30" name="marca"/>
+							<select name="marca">
+								<option value="Acer">Acer</option>
+								<option value="Asus">Asus</option>
+								<option value="Apple">Apple</option>
+								<option value="Lenovo">Lenovo</option>
+								<option value="Dell">Dell</option>
+								<option value="HP">HP</option>
+								<option value="Toshiba">Toshiba</option>
+								<option value="Samsung">Samsung</option>
+								<option value="Otro">Otro</option>
+							</select>
 						</div>
 						<div class="col-md-12">
 							<label for="equipo" class="col-md-3 control-label">Nº de Equipo:</label>
@@ -35,8 +46,17 @@
 							<input class="col-md-3" type="text" maxlength="30" name="red"/>
 						</div>
 						<div class="col-md-12">
+							<label for="tipo_problema" class="col-md-3 control-label">Tipo de Problema:</label>
+							<select name="tipo_problema">
+								<option value="Software">Software</option>
+								<option value="Hardware">Hardware</option>
+								<option value="Red">Red</option>
+								<option value="Otro">Otro</option>
+							</select>
+						</div>
+						<div class="col-md-12">
 							<label for="Problema" class="col-md-3 control-label">Problema:</label>
-							<textarea name="descprob" rows="10" cols="40" required></textarea>
+							<textarea name="problema" rows="10" cols="40" required></textarea>
 						</div>  						
 						<div class="form-group">
 							<div class="col-md-offset-3 col-md-9">

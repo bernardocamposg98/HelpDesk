@@ -1,15 +1,12 @@
 <html>
-
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
-
 <body>
     <div class="container">
-       
         <div class="row justify-content-center">
             <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-10 col-lg-10 col-xl-6 col-sm-12">
                  <div class="login" >
@@ -18,7 +15,6 @@
                         <div class="panel-title" id="title"><strong>Help Desk</strong></div>
                     </div>
                     <form action="metodos/login.php" method="post" autocomplete="off">
-
                         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
                         <form id="loginform" class="form-horizontal" role="form" method="POST" autocomplete="off">
                             <div  class="input-group">
@@ -27,8 +23,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-user"></i></span>
                                     </div>
-                                    
-                                    <input id="usuario" type="text" class="form-control" name="usuario_i" value="" placeholder="Usuario..." required>
+                                    <input id="usuario" type="text" class="form-control" name="usuario" value="" placeholder="Usuario..." required>
                                 </div>
                             </div>
                             <div class="input-group">
@@ -36,18 +31,16 @@
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-user-lock"></i></span>
-                                    </div>
-                                
-                                <input id="password" type="password" class="form-control" name="password_i" placeholder="Contraseña..." required>
+                                    </div>    
+                                    <input id="password" type="password" class="form-control" name="password" placeholder="Contraseña..." required>
                                 </div>
-                                </div>
+                            </div>
                             <div style="margin-top:10px" class="form-group">
                                 <div class="controls">
                                     <button id="btn-login" type="submit" class="btn btn-success">Iniciar Sesión</a>
                                 </div>
                             </div>
                         </form>
-
                     </form>
                 </div>
             </div>
