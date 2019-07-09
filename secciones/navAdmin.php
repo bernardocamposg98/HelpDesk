@@ -7,7 +7,7 @@
         <div class="navbar-nav  ml-auto">
             <a class="textnav nav-item nav-link" href="../HelpDesk/administradorIndex.php" data-toggle="tooltip" data-placement="bottom" title="Inicio">Inicio <i class="fas fa-home"></i></a>
             <li class="nav-item dropdown">
-                <a class="textnav nav-link dropdown-toggle" href="../HelpDesk/administradorIndex.php" id="navbardrop" data-toggle="dropdown" data-toggle="tooltip" data-placement="bottom" title="Accciones">
+                <a class="textnav nav-link dropdown-toggle" href="" id="navbardrop" data-toggle="dropdown" data-toggle="tooltip" data-placement="bottom" title="Accciones">
                     Acciones <i class="fas fa-users"></i>
                 </a>
                 <div class="dropdown-menu">
@@ -16,7 +16,7 @@
                     <a class="textnav dropdown-item" href="../HelpDesk/administradorTicketNuevo.php" data-toggle="tooltip" data-placement="bottom">Abrir Ticket</a>
                     <a class="textnav dropdown-item" href="../HelpDesk/administradorTicketAbierto.php" data-toggle="tooltip" data-placement="bottom" >Tickets Abiertos</a>
                     <a class="textnav dropdown-item" href="../HelpDesk/administradorTicketCerrado.php" data-toggle="tooltip" data-placement="bottom" >Tickets Cerrados</a>
-                    <a class="textnav dropdown-item" href="../HelpDesk/administradorTicketHistorial.php" data-toggle="tooltip" data-placement="bottom" >Tickets Historial</a>
+                    <a class="textnav dropdown-item" href="../administradorTicketHistorial.php" data-toggle="tooltip" data-placement="bottom" >Tickets Historial</a>
                 </div>
             </li>
         </div>
