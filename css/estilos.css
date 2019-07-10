@@ -14,3 +14,10 @@
     border-top: px solid;
     box-shadow: 1px 5px 20px 2px #888888;
 }
+.ticketNuevo{
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-top: px solid;
+    box-shadow: 1px 5px 20px 2px #888888; 
+}

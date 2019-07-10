@@ -8,9 +8,18 @@ header("location: index.php");
 ?>
 <?php require_once './secciones/header.php';?>
      <?php require_once './secciones/navAdmin.php';?>
-    <h3>Tickets Historial </h3>
-    <a class = "btn btn-danger" href="metodos/pdfHistorial.php">Reporte Historial Completo</a>
-    <table  class="table table-striped" id="tablatickets" >
+<div class="container">
+    <div class="jumbotron">
+    <h1>Historial Tickets</h1>      
+    <p>Aqui se podran observar los todo los Tickets Ingresados en el sistema.</p>
+  </div>
+
+<div class="table-responsive">
+    <a class = "btn btn-success" href="metodos/pdfHistorial.php">Reporte Historial Completo</a>
+    <br>
+    <br>
+
+    <table  class="tabla table table-striped" id="tablatickets" >
             <th>ID</th>
             <th>Fecha de apertura</th>
             <th>Usuario de apertura</th>
@@ -47,5 +56,7 @@ header("location: index.php");
         </tr>
         <?php } ?>
     </table>
+</div>
+</div>
 <?php require_once './secciones/footer.php';?>
      

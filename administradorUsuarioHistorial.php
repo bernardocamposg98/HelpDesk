@@ -11,9 +11,13 @@
 
 	
     <div class="container">
-    	<h2>Usuarios en el sistema</h2>
-        <br>           
-        <table  class="table table-striped " id="tablatickets">        
+    	 <div class="jumbotron">
+    <h1>Tickets Abiertos</h1>      
+    <p>Aqui se podran observar los tickets pendientes por darles solucion.</p>
+  </div>       
+        <div class="table-responsive">
+        
+        <table  class=" tabla table table-striped " id="tablatickets">        
 			<th>ID</th> 
 			<th>Nombre</th>
 			<th>Usuario</th>
@@ -39,5 +43,6 @@
             <?php } ?>
         </table>
     </div>
+</div>
 
      <?php require_once './secciones/footer.php';?>
