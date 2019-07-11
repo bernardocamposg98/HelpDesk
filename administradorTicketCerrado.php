@@ -8,10 +8,16 @@ header("location: index.php");
 ?>
 <?php require_once './secciones/header.php';?>
      <?php require_once './secciones/navAdmin.php';?>
-        
-    <h3>Tickets cerrados </h3>
+     <div class="container">
+  <div class="jumbotron">
+    <h1>Tickets Cerrados</h1>      
+    <p>Aqui se podran observar los tickets que ya se les dio solucion.</p>
+  </div>
+<div class="table-responsive ">
     <a class = "btn btn-danger" href="metodos/pdfCerradoHistorial.php">Reporte Historial Cerrado</a>
-    <table  class="table table-striped" id="tablatickets" >
+    <br>
+    <br>
+    <table  class=" tabla table table-striped" id="tablatickets" >
             <th>ID</th>
             <th>Fecha de apertura</th>
             <th>Usuario de apertura</th>
@@ -44,5 +50,7 @@ header("location: index.php");
         </tr>
         <?php } ?>
     </table>
+</div>
+</div>
 
      <?php require_once './secciones/footer.php';?>
