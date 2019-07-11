@@ -16,7 +16,7 @@
 }
 
 .textnav:hover {
-    color: rgba(130, 135, 130, 1);
+    color: rgba(130, 135, 130, 1)!important;
     font-size: 27px;
 
 }
