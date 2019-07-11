@@ -17,9 +17,19 @@ header("location: index.php");
     <?php require_once './secciones/navAdmin.php';?>
     <br>
     <br>
+<<<<<<< HEAD
 	<div class="container col-md-12">
         <h3>Tickets Eliminados</h3>
         <table  class="table table-striped" id="tablatickets" >
+=======
+	<div class="container">
+        <div class="jumbotron">
+    <h1>Mis Tickets Abiertos Historial</h1>      
+    <p>Aqui se podran observar los tickets pendientes por darles solucion.</p>
+  </div>
+        <div class="table-responsive">
+        <table  class="tabla table table-striped" id="tablatickets" >
+>>>>>>> cc1c5864062dee39c1dea98b5eb389beccc134bb
                 <th>ID</th>
                 <th>Fecha de apertura</th>
                 <th>Usuario de apertura</th>
@@ -53,6 +63,7 @@ header("location: index.php");
             </tr>
             <?php } ?>
         </table>
+<<<<<<< HEAD
 		<h3>Usuarios Eliminados</h3>
         <table  class="table table-striped" id="tablatickets" >
             <th>ID</th> 
@@ -62,6 +73,27 @@ header("location: index.php");
 			<th>Celular</th>
 			<th>Tipo de usuario</th>
             <th>RECUPERAR</th>
+=======
+        </div>
+         <br>
+   <div class="jumbotron">
+    <h1>Mis Tickets Cerrados Historial</h1>      
+    <p>Aqui se podran observar los Tickets que ya se les dio solucion.</p>
+  </div>
+		<div class="table-responsive">
+        <table  class="tabla table table-striped" id="tablatickets" >
+                <th>ID</th>
+                <th>Fecha de apertura</th>
+                <th>Usuario de apertura</th>
+                <th>Marca</th>
+                <th>Red</th>
+                <th>Nº de Equipo</th>
+                <th>Tipo de Problema</th>
+                <th>Problema</th>
+                <th>Finalizo</th>
+                <th>Técnico de respuesta</th>
+                <th>Respuesta</th>
+>>>>>>> cc1c5864062dee39c1dea98b5eb389beccc134bb
                 <?php 
                 $id = $_SESSION["id"];
                 $sel = $con->query("SELECT*FROM usuarios where estatus='eliminado'");
@@ -78,6 +110,7 @@ header("location: index.php");
             </tr>
             <?php } ?>
         </table>
+            </div>
     </div>
 <?php require_once './secciones/footer.php';?>
 

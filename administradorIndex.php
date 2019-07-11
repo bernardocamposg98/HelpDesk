@@ -92,9 +92,13 @@ header("location: index.php");
 	
     <br>
     <br>
-	<div class="container col-md-12">
-        <h3>Mis Tickets Abiertos</h3>
-        <table  class="table table-striped" id="tablatickets" >
+	<div class="container">
+         <div class="jumbotron">
+    <h1>Tickets Abiertos</h1>      
+    <p>Aqui se podran observar los tickets pendientes por darles solucion.</p>
+  </div>
+        <div class="table-responsive">
+        <table  class="tabla table table-striped" id="tablatickets" >
                 <th>ID</th>
                 <th>Fecha de apertura</th>
                 <th>Usuario de apertura</th>
@@ -126,7 +130,13 @@ header("location: index.php");
             </tr>
             <?php } ?>
         </table>
-		<h3>Mis Tickets Cerrados</h3>
+            </div>
+        <br>
+		<div class="jumbotron">
+    <h1>Tickets Cerrados</h1>      
+    <p>Aqui se podran observar los tickets que ya se les dio solucion.</p>
+  </div>
+        <div class="table-responsive">
         <table  class="table table-striped" id="tablatickets" >
                 <th>ID</th>
                 <th>Fecha de apertura</th>
@@ -159,6 +169,7 @@ header("location: index.php");
             </tr>
             <?php } ?>
         </table>
+            </div>
     </div>
 <?php require_once './secciones/footer.php';?>
 
