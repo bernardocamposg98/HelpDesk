@@ -9,10 +9,12 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Tecnico"){
 <?php require_once './secciones/header.php';?>
      <?php require_once './secciones/navTecnico.php';?>
 	<div class="container">
-		<h2>Tickets Abiertos</h2>
-		<br>
-		<div class="col-md-12">
-			<table class="table table-striped" id="tabtoclesp">
+		<div class="jumbotron">
+    <h1>Tickets Abiertos</h1>      
+    <p>Aqui se podran observar los tickets pendientes por darles solucion.</p>
+  </div>
+		<div class="table-responsive">
+			<table class=" tabla table table-striped" id="tabtoclesp">
 				<th>ID</th>
 				<th>Fecha de apertura</th>
 				<th>Usuario de apertura</th>
