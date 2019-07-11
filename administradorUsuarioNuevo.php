@@ -31,7 +31,7 @@ session_start();
                                     
                                       <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-user-lock"></i></span>
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
                                     </div>
 									<input type="text" class="form-control" name="nombre" placeholder="Nombre y apellidos" required>
                                     </div>
@@ -42,7 +42,7 @@ session_start();
 								<div class="">
                                       <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-user-lock"></i></span>
+                                        <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
                                     </div>
 									<input type="text" class="form-control" name="usuario" placeholder="Usuario" required>
                                     </div>
@@ -53,7 +53,7 @@ session_start();
 								<div class="">
                                       <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-user-lock"></i></span>
+                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
                                     </div>
 									<input type="password" class="form-control" name="password" id = "password" placeholder="Password" required>
                                     </div>
@@ -64,7 +64,7 @@ session_start();
 								<div class="">
                                       <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-user-lock"></i></span>
+                                        <span class="input-group-text"><i class="fas fa-key fa-key"></i></span>
                                     </div>
 									<input type="password" class="form-control" name="con_password" id = "con_password" placeholder="Confirmar Password" required>
 								</div>
@@ -75,7 +75,7 @@ session_start();
 								<div class="">
                                       <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-user-lock"></i></span>
+                                        <span class="input-group-text"><i class="fas fa-at"></i></span>
                                     </div>
 									<input type="email" class="form-control" name="email" placeholder="Email" required>
                                     </div>
@@ -86,9 +86,9 @@ session_start();
 								<div class="">
                                       <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fas fa-user-lock"></i></span>
+                                        <span class="input-group-text"><i class="fa fa-mobile-phone" style="font-size: 25px;"></i></span>
                                     </div>
-									<input type="number" class="form-control" name="celular" placeholder="Celular" required>
+									<input type="text" id="phone" class="form-control" name="celular" placeholder="Celular" required>
                                     </div>
 								</div>
 							</div>
@@ -115,4 +115,13 @@ session_start();
 		</div>
 	</div>
 	 <?php require_once './secciones/footer.php';?>
-
+<script src="http://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="js/inputmask/dist/jquery.inputmask.js" type="text/javascript"></script>
+<script src="js/inputmask/dist/bindings/inputmask.binding.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+  $('#phone').inputmask("99-9999999");  //static mask
+  $('#phone').inputmask({"mask": "(999) 999-9999"}); //specifying options
+  $('phone').inputmask("9-a{1,3}9{1,3}"); //mask with dynamic syntax
+});
+    </script>

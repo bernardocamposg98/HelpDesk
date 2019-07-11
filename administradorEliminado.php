@@ -20,8 +20,8 @@ header("location: index.php");
 
 	<div class="container">
         <div class="jumbotron">
-    <h1>Mis Tickets Abiertos Historial</h1>      
-    <p>Aqui se podran observar los tickets pendientes por darles solucion.</p>
+    <h1>Tickets Eliminados</h1>      
+    <p>Aqui se podran observar los tickets Eliminados.</p>
   </div>
         
         <div class="table-responsive">
