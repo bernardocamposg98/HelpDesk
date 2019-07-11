@@ -12,8 +12,8 @@
 	
     <div class="container">
     	 <div class="jumbotron">
-    <h1>Tickets Abiertos</h1>      
-    <p>Aqui se podran observar los tickets pendientes por darles solucion.</p>
+    <h1>Usuarios</h1>      
+    <p>Aqui se podran observar los usuarios.</p>
   </div>       
         <div class="table-responsive">
         

@@ -9,9 +9,13 @@ header("location: index.php");
 <?php require_once './secciones/header.php';?>
      <?php require_once './secciones/navTecnico.php';?>
     <div class="container">
-        <h3>Mis Tickets </h3>
-        <table  class="table table-striped" id="tablatickets" >
-                <th>ID</th>
+         <div class="jumbotron">
+    <h1>Mis Tickets </h1>      
+    <p>Aqui se podran observar los sus Tickets.</p>
+  </div>
+        <div class="table-responsive">
+        <table  class="tabla table table-striped" id="tablatickets" >
+               
                 <th>Fecha de apertura</th>
                 <th>Usuario de apertura</th>
                 <th>Marca</th>
@@ -28,7 +32,7 @@ header("location: index.php");
                 while ($fila = $sel -> fetch_assoc()) {
             ?>
             <tr>
-                <td><?php echo $fila['id']?></td>
+             
                 <td><?php echo $fila['fecha_inicio']?></td>
                 <td><?php echo $fila['nombre_usuario']?></td>
                 <td><?php echo $fila['marca']?></td>
@@ -42,5 +46,6 @@ header("location: index.php");
             </tr>
             <?php } ?>
         </table>
+</div>
     </div>
 <?php require_once './secciones/footer.php';?>

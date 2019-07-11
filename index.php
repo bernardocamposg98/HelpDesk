@@ -4,17 +4,19 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ 
+       
 </head>
-<body>
-    <h1>Bienvenidos</h1>
-    <div class="container">
+<body style="background-image: url('img/tecnologiatextura.png'); ">
+    <h1 class="titleIndex"><strong>Bienvenidos</strong></h1>
+     <h5 class="titleIndex"><strong>HelpDesk</strong></h5>
+    <div class="container w3-animate-zoom">
         <div class="row justify-content-center">
             <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-10 col-lg-10 col-xl-6 col-sm-12">
                  <div class="login" >
                 <div class="panel panel-info ">
-                    <div class="panel-heading">
-                        <div class="panel-title" id="title"><strong>Help Desk</strong></div>
-                    </div>
+                   
                     <form action="metodos/login.php" method="post" autocomplete="off">
                         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
                         <form id="loginform" class="form-horizontal" role="form" method="POST" autocomplete="off">

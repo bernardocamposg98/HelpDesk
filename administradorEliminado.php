@@ -25,7 +25,7 @@ header("location: index.php");
   </div>
         
         <div class="table-responsive">
-        <table  class="tabla table table-striped" id="tablatickets" >
+        <table  class="tabla table table-bordered table-hover table-striped" id="tablatickets" >
 
                 <th>ID</th>
                 <th>Fecha de apertura</th>

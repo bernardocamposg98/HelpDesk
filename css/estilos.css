@@ -6,6 +6,7 @@
     background-color: rgba(255, 255, 255, 0.7);
      border-top: px solid;
     box-shadow: 1px 5px 20px 2px #888888;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .newUsuario{
@@ -26,5 +27,9 @@
 }
 .textgrafica{
    font-family: 'Noto Sans', sans-serif !important; 
+    
+}
+.titleIndex{
+    text-align: center;
     
 }

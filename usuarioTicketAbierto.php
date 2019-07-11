@@ -17,7 +17,7 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Usuario"){
   </div>
     <div class="table-responsive">
     <table class="tabla table table-striped">
-        <th>ID</th>
+    
         <th>Fecha de apertura</th>
         <th>Usuario de apertura</th>
         <th>Marca</th>
@@ -30,7 +30,7 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Usuario"){
             while ($fila = $sel -> fetch_assoc()) {
             ?>
         <tr>
-            <td><?php echo $fila['id']?></td>
+          
             <td><?php echo $fila['fecha_inicio']?></td>
             <td><?php echo $fila['nombre_usuario']?></td>
             <td><?php echo $fila['marca']?></td>

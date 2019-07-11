@@ -9,6 +9,7 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Administrador"){
 <?php require_once './secciones/header.php';?>
 <?php require_once './secciones/navAdmin.php';?>
 
+<div style="background-image: url('img/tecnologiatextura.png'); ">
 <div class="container">
      
   <div class="jumbotron">
@@ -20,7 +21,7 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Administrador"){
         <a class="btn btn-success" href="metodos/pdfAbiertoHistorial.php">Reporte Completo</a>
         <br>
         <br>
-        <table class="tabla table table-striped" id="tabtoclesp">
+        <table class="tabla table tabled-bordered table-hover table-striped" id="tabtoclesp">
             <thead class="thead-light">
                 <tr>
                     <th>ID</th>
@@ -40,6 +41,7 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Administrador"){
 			$sel = $con->query("SELECT * FROM tickets WHERE fecha_fin IS NULL and estatus='activo'");
 			while ($fila = $sel -> fetch_assoc()) {
 			?>
+            <tbody>
             <tr>
                 <td><?php echo $fila['id']?></td>
                 <td><?php echo $fila['fecha_inicio']?></td>
@@ -63,7 +65,10 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Administrador"){
                 </form>
             </tr>
             <?php } ?>
+                </tbody>
         </table>
     </div>
 </div>
+</div>
 <?php require_once './secciones/footer.php';?>
+

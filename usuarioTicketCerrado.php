@@ -16,7 +16,7 @@ header("location: index.php");
   </div>
         <div class="table-responsive">
         <table  class=" tabla table table-striped" id="tablatickets" >
-            <th>ID</th>
+           
             <th>Fecha de apertura</th>
             <th>Usuario de apertura</th>
             <th>Red</th>
@@ -32,7 +32,7 @@ header("location: index.php");
             while ($fila = $sel -> fetch_assoc()) {
             ?>
             <tr>
-            <td><?php echo $fila['id']?></td>
+           
                 <td><?php echo $fila['fecha_inicio']?></td>
                 <td><?php echo $fila['nombre_usuario']?></td>
                 <td><?php echo $fila['red']?></td>
