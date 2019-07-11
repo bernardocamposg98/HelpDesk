@@ -35,7 +35,7 @@ header("location: index.php");
             <th>MODIFICAR</th>
             <th>ELIMINAR</th>
             <?php 
-        $sel = $con->query("SELECT*FROM tickets");
+        $sel = $con->query("SELECT*FROM tickets where estatus='activo'");
         while ($fila = $sel -> fetch_assoc()) {
         ?>
         <tr>

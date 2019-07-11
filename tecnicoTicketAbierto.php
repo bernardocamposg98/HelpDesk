@@ -25,7 +25,7 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Tecnico"){
 				<th>Respuesta</th>
 				<th>Cerrar</th>
 				<?php
-				$sel = $con->query("SELECT * FROM tickets WHERE fecha_fin IS NULL");
+				$sel = $con->query("SELECT * FROM tickets WHERE fecha_fin IS NULL and estatus='activo'");
 				while ($fila = $sel -> fetch_assoc()) {
 				?>
 				<tr>

@@ -27,18 +27,18 @@
 			<th></th>
 			<th></th>
 			<?php
-            $sel = $con->query("SELECT*FROM usuarios WHERE NOT id=1"); 
+            $sel = $con->query("SELECT*FROM usuarios WHERE NOT id=1 and estatus='activo'"); 
             while ($fila = $sel -> fetch_assoc()) {
             ?>
             <tr class="text-left">
                 <td><?php echo $fila['id']?></td>
-				<td><?php echo $fila['nombre']?></td>
-				<td><?php echo $fila['usuario']?></td>
-				<td><?php echo $fila['email']?></td>
-				<td><?php echo $fila['celular']?></td>
-				<td><?php echo $fila['tipo_usuario']?></td>
-				<td><a class="btn btn-primary" href="administradorUsuarioModificar.php?id=<?php echo $fila['id']?>">MODIFICAR</a></td>
-				<td><a class="btn btn-danger" href="metodos/eliminarUsuario.php?id=<?php echo $fila['id']?>">ELIMINAR</a></td>
+                <td><?php echo $fila['nombre']?></td>
+                <td><?php echo $fila['usuario']?></td>
+                <td><?php echo $fila['email']?></td>
+                <td><?php echo $fila['celular']?></td>
+                <td><?php echo $fila['tipo_usuario']?></td>
+                <td><a class="btn btn-primary" href="administradorUsuarioModificar.php?id=<?php echo $fila['id']?>">MODIFICAR</a></td>
+                <td><a class="btn btn-danger" href="metodos/eliminarUsuario.php?id=<?php echo $fila['id']?>">ELIMINAR</a></td>
             </tr>
             <?php } ?>
         </table>

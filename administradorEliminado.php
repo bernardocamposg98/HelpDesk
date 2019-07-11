@@ -17,6 +17,11 @@ header("location: index.php");
     <?php require_once './secciones/navAdmin.php';?>
     <br>
     <br>
+<<<<<<< HEAD
+	<div class="container col-md-12">
+        <h3>Tickets Eliminados</h3>
+        <table  class="table table-striped" id="tablatickets" >
+=======
 	<div class="container">
         <div class="jumbotron">
     <h1>Mis Tickets Abiertos Historial</h1>      
@@ -24,6 +29,7 @@ header("location: index.php");
   </div>
         <div class="table-responsive">
         <table  class="tabla table table-striped" id="tablatickets" >
+>>>>>>> cc1c5864062dee39c1dea98b5eb389beccc134bb
                 <th>ID</th>
                 <th>Fecha de apertura</th>
                 <th>Usuario de apertura</th>
@@ -35,9 +41,10 @@ header("location: index.php");
                 <th>Finalizo</th>
                 <th>Técnico de respuesta</th>
                 <th>Respuesta</th>
+                <th>RECUPERAR</th>
                 <?php 
                 $id = $_SESSION["id"];
-                $sel = $con->query("SELECT*FROM tickets where id_usuario = $id");
+                $sel = $con->query("SELECT*FROM tickets where estatus='eliminado'");
                 while ($fila = $sel -> fetch_assoc()) {
             ?>
             <tr>
@@ -52,9 +59,21 @@ header("location: index.php");
                 <td><?php echo $fila['fecha_fin']?></td>
                 <td><?php echo $fila['nombre_tecnico']?></td>
                 <td><?php echo $fila['respuesta']?></td>
+                <td><a class="btn btn-primary" href="metodos/recuperarTicket.php?id=<?php echo $fila['id']?>">RECUPERAR</a></td>
             </tr>
             <?php } ?>
         </table>
+<<<<<<< HEAD
+		<h3>Usuarios Eliminados</h3>
+        <table  class="table table-striped" id="tablatickets" >
+            <th>ID</th> 
+			<th>Nombre</th>
+			<th>Usuario</th>
+			<th>Email</th>
+			<th>Celular</th>
+			<th>Tipo de usuario</th>
+            <th>RECUPERAR</th>
+=======
         </div>
          <br>
    <div class="jumbotron">
@@ -74,23 +93,20 @@ header("location: index.php");
                 <th>Finalizo</th>
                 <th>Técnico de respuesta</th>
                 <th>Respuesta</th>
+>>>>>>> cc1c5864062dee39c1dea98b5eb389beccc134bb
                 <?php 
                 $id = $_SESSION["id"];
-                $sel = $con->query("SELECT*FROM tickets where id_tecnico = $id");
+                $sel = $con->query("SELECT*FROM usuarios where estatus='eliminado'");
                 while ($fila = $sel -> fetch_assoc()) {
             ?>
             <tr>
                 <td><?php echo $fila['id']?></td>
-                <td><?php echo $fila['fecha_inicio']?></td>
-                <td><?php echo $fila['nombre_usuario']?></td>
-                <td><?php echo $fila['marca']?></td>
-                <td><?php echo $fila['red']?></td>
-                <td><?php echo $fila['equipo']?></td>
-                <td><?php echo $fila['tipo_problema']?></td>
-                <td><?php echo $fila['problema']?></td>
-                <td><?php echo $fila['fecha_fin']?></td>
-                <td><?php echo $fila['nombre_tecnico']?></td>
-                <td><?php echo $fila['respuesta']?></td>
+				<td><?php echo $fila['nombre']?></td>
+				<td><?php echo $fila['usuario']?></td>
+				<td><?php echo $fila['email']?></td>
+				<td><?php echo $fila['celular']?></td>
+				<td><?php echo $fila['tipo_usuario']?></td>
+                <td><a class="btn btn-primary" href="metodos/recuperarUsuario.php?id=<?php echo $fila['id']?>">RECUPERAR</a></td>
             </tr>
             <?php } ?>
         </table>

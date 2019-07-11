@@ -31,7 +31,7 @@ header("location: index.php");
             <th>Respuesta</th>
             <th>PDF</th>
             <?php
-        $sel = $con->query("SELECT*FROM tickets WHERE fecha_fin IS NOT NULL");
+        $sel = $con->query("SELECT*FROM tickets WHERE fecha_fin IS NOT NULL and estatus='activo'");
         while ($fila = $sel -> fetch_assoc()) {
         ?>
         <tr>

@@ -24,7 +24,7 @@ header("location: index.php");
                 <th>Respuesta</th>
                 <?php 
                 $id = $_SESSION["id"];
-                $sel = $con->query("SELECT*FROM tickets where id_tecnico = $id");
+                $sel = $con->query("SELECT*FROM tickets where id_tecnico = $id and estatus='activo'");
                 while ($fila = $sel -> fetch_assoc()) {
             ?>
             <tr>

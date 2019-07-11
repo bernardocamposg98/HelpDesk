@@ -28,7 +28,7 @@ header("location: index.php");
             <th>Técnico de respuesta</th>
             <th>Respuesta</th>
             <?php
-            $sel = $con  -> query("SELECT * FROM tickets WHERE fecha_fin IS NOT NULL"); //aqui tabla de tickets normales
+            $sel = $con  -> query("SELECT * FROM tickets WHERE fecha_fin IS NOT NULL and estatus='activo'"); //aqui tabla de tickets normales
             while ($fila = $sel -> fetch_assoc()) {
             ?>
             <tr>
