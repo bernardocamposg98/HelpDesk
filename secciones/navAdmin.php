@@ -17,6 +17,7 @@
                     <a class="textnav dropdown-item" href="../HelpDesk/administradorTicketAbierto.php" data-toggle="tooltip" data-placement="bottom" >Tickets Abiertos</a>
                     <a class="textnav dropdown-item" href="../HelpDesk/administradorTicketCerrado.php" data-toggle="tooltip" data-placement="bottom" >Tickets Cerrados</a>
                     <a class="textnav dropdown-item" href="../HelpDesk/administradorTicketHistorial.php" data-toggle="tooltip" data-placement="bottom" >Tickets Historial</a>
+                    <a class="textnav dropdown-item" href="../HelpDesk/administradorEliminado.php" data-toggle="tooltip" data-placement="bottom" >Eliminado</a>
                 </div>
             </li>
         </div>
