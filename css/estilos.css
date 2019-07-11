@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
 
 .login{
     padding: 10px;
@@ -13,6 +14,7 @@
     background-color: rgba(255, 255, 255, 0.7);
     border-top: px solid;
     box-shadow: 1px 5px 20px 2px #888888;
+    font-family: 'Noto Sans', sans-serif;
 }
 .ticketNuevo{
     padding: 10px;
@@ -20,4 +22,9 @@
     background-color: rgba(255, 255, 255, 0.7);
     border-top: px solid;
     box-shadow: 1px 5px 20px 2px #888888; 
+    font-family: 'Noto Sans', sans-serif;
+}
+.textgrafica{
+   font-family: 'Noto Sans', sans-serif !important; 
+    
 }
