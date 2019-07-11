@@ -26,7 +26,7 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Usuario"){
         <th>Tipo de Problema</th>
         <th>Problema</th>
         <?php
-            $sel = $con  -> query("SELECT * FROM tickets WHERE fecha_fin IS NULL"); //aqui tabla de tickets normales
+            $sel = $con  -> query("SELECT * FROM tickets WHERE fecha_fin IS NULL and estatus='activo'"); //aqui tabla de tickets normales
             while ($fila = $sel -> fetch_assoc()) {
             ?>
         <tr>

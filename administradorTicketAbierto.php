@@ -37,7 +37,7 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Administrador"){
                 </tr>
             </thead>
             <?php
-			$sel = $con->query("SELECT * FROM tickets WHERE fecha_fin IS NULL");
+			$sel = $con->query("SELECT * FROM tickets WHERE fecha_fin IS NULL and estatus='activo'");
 			while ($fila = $sel -> fetch_assoc()) {
 			?>
             <tr>

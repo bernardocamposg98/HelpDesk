@@ -2,7 +2,20 @@
 require_once ("../conexion/conexion.php"); 
 
 $id = $_REQUEST['id'];
-$del = $con ->query("DELETE FROM tickets WHERE id='$id' ");
+$sel = $con->query("SELECT*FROM tickets where id = $id");
+while ($fila = $sel -> fetch_assoc()) { 
+    $fecha = $fila['fecha_fin'];
+}
+echo $fecha;
+
+if($fecha == "") {
+    $fecha = "nulo";
+}
+if($fecha == 'nulo') {
+    $del = $con->query("UPDATE tickets SET estatus='".eliminado."', fecha_fin=null WHERE id='$id' ");
+} else {
+    $del = $con->query("UPDATE tickets SET estatus='".eliminado."', fecha_fin='".$fecha."' WHERE id='$id' ");
+}
 
 if ($del) {
     echo "<script>location.href='../administradorTicketHistorial.php';</script>";

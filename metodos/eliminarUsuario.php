@@ -2,7 +2,7 @@
 require_once ("../conexion/conexion.php"); 
 
 $id = $_REQUEST['id'];
-$del = $con ->query("DELETE FROM usuarios WHERE id = '$id' ");
+$del = $con ->query("UPDATE usuarios SET estatus='".eliminado."' WHERE id = '$id' ");
 
 if ($del) {
     echo "<script>location.href='../administradorUsuarioHistorial.php';</script>";
