@@ -19,8 +19,9 @@ header("location: index.php");
     <br>
     <br>
 
-    <table  class="tabla table table-striped" id="tablatickets" >
-            <th>ID</th>
+    <table  class="tabla table-bordered table-hover table table-striped" id="tablatickets" >
+        <tbody class="thead-light">  
+        <th>ID</th>
             <th>Fecha de apertura</th>
             <th>Usuario de apertura</th>
             <th>Marca</th>
@@ -38,6 +39,7 @@ header("location: index.php");
         $sel = $con->query("SELECT*FROM tickets where estatus='activo'");
         while ($fila = $sel -> fetch_assoc()) {
         ?>
+            </tbody>  
         <tr>
             <td><?php echo $fila['id']?></td>
             <td><?php echo $fila['fecha_inicio']?></td>

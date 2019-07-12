@@ -15,9 +15,7 @@ session_start();
   </div>
         <div class="row justify-content-center" >
 		<div id="" style="margin-top:50px" class="mainbox col-md-10 col-lg-10 col-xl-6 col-sm-12">
-			<div class="newUsuario panel panel-info">
-				<div class="panel-heading">
-				</div>  
+			<div class="newUsuario panel panel-info"> 
 				<div>
 					<div class="panel-body">
 						<form id="signupform" class="form-horizontal" role="form" action="metodos/guardarUsuario.php" method="POST" autocomplete="off">
@@ -25,7 +23,7 @@ session_start();
 								<p>Error:</p>
 								<span></span>
 							</div>-->
-							<div class="form-group">
+							<div class="col-md-12">
 								<label for="nombre" class=" control-label">Nombre:</label>
 								<div class="">
                                     
@@ -37,7 +35,7 @@ session_start();
                                     </div>
 								</div>
 							</div>
-							<div class="form-group">
+							<div class="col-md-12">
 								<label for="usuario" class="control-label">Usuario:</label>
 								<div class="">
                                       <div class="input-group mb-3">
@@ -48,7 +46,7 @@ session_start();
                                     </div>
 								</div>
 							</div>
-							<div class="form-group">
+							<div class="col-md-12">
 								<label for="password" class=" ">Password:</label>
 								<div class="">
                                       <div class="input-group mb-3">
@@ -59,7 +57,7 @@ session_start();
                                     </div>
 								</div>
 							</div>
-							<div class="form-group">
+							<div class="col-md-12">
 								<label for="con_password" class=" control-label">Confirmar Password</label>
 								<div class="">
                                       <div class="input-group mb-3">
@@ -70,7 +68,7 @@ session_start();
 								</div>
                                 </div>
 							</div>
-							<div class="form-group">
+							<div class="col-md-12">
 								<label for="email" class=" control-label">Email</label>
 								<div class="">
                                       <div class="input-group mb-3">
@@ -81,7 +79,7 @@ session_start();
                                     </div>
 								</div>
 							</div>
-							<div class="form-group">
+							<div class="col-md-12">
 								<label for="celular" class=" control-label">Celular</label>
 								<div class="">
                                       <div class="input-group mb-3">
@@ -92,7 +90,7 @@ session_start();
                                     </div>
 								</div>
 							</div>
-							<div id="listaLevelAccess">
+							<div id="listaLevelAccess" class="col-md-12">
 								<label for="tipo_usuario" class="control-label">Nivel de acceso</label>
 								<div class=""> 
 									<select class="custom-select" name="nivel_usuario" action="guardar.php" method="POST">
@@ -103,10 +101,10 @@ session_start();
 								</div>
 							</div>
                             <br>
-							<div class="form-group">
-								<div class="">
-									<button id="btn-signup" type="submit" value = "Guardar" class="btn btn-primary"><i class="icon-hand-right"></i>Registrar</button> 
-								</div>
+							<div class="col-md-12">
+								
+									<button id="btn-signup" type="submit" value = "Guardar" class="form-control btn btn-success"><i class="icon-hand-right"></i>Registrar</button> 
+				
 							</div>
 						</form>
 					</div>                              </div>   	

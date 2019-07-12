@@ -15,7 +15,7 @@ header("location: index.php");
     <p>Aqui se podran observar los tickets que ya se les dio solucion.</p>
   </div>
         <div class="table-responsive">
-        <table  class=" tabla table table-striped" id="tablatickets" >
+        <table  class=" tabla table-hover table-bordered table table-striped" id="tablatickets" >
            
             <th>Fecha de apertura</th>
             <th>Usuario de apertura</th>

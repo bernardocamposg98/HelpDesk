@@ -20,8 +20,8 @@
                 <div class="panel-body">
                     <form action="metodos/administradorGuardarTicketNuevo.php" method="post">
                         <div class="">
-                            <label class=" control-label" nombre="nombreusuario">Nombre:</label>
-                            <label class=" control-label" nombre="nombreusuario"><?php echo $_SESSION['nombre']?></label>
+                            <label class="col-md-12 control-label" nombre="nombreusuario">Nombre: <strong><?php echo $_SESSION['nombre']?></strong></label>
+                           
                         </div>
                         <input type="hidden" name="nombre_usuario" value="<?php echo $_SESSION['nombre']; ?>" />
                         <input type="hidden" name="id_usuario" value="<?php echo $_SESSION['id']; ?>" />
@@ -91,11 +91,11 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="	fas fa-tools"></i></span>
                                     </div>
-                                    <textarea name="problema" rows="10" cols="60" required></textarea>
+                                    <textarea name="problema" rows="10" cols="40" required></textarea>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="col-md-12">
                             <div class="">
                                 <button id="btn-signup" type="submit" class="form-control btn btn-success" value="Guardar"><i class="icon-hand-right"></i>ENVIAR</button>
                             </div>

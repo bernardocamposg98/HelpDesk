@@ -14,8 +14,8 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Tecnico"){
     <p>Aqui se podran observar los tickets pendientes por darles solucion.</p>
   </div>
 		<div class="table-responsive">
-			<table class=" tabla table table-striped" id="tabtoclesp">
-				
+			<table class=" tabla table table-bordered table-hover table-striped" id="tabtoclesp">
+				<thead>
 				<th>Fecha de apertura</th>
 				<th>Usuario de apertura</th>
 				<th>Equipo</th>
@@ -28,6 +28,8 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Tecnico"){
 				$sel = $con->query("SELECT * FROM tickets WHERE fecha_fin IS NULL and estatus='activo'");
 				while ($fila = $sel -> fetch_assoc()) {
 				?>
+                    </thead>
+                <tbody>
 				<tr>
 					
 					<td><?php echo $fila['fecha_inicio']?></td>
@@ -48,6 +50,7 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Tecnico"){
 						</td>
 					</form>
 				</tr>
+                    </tbody>
 				<?php } ?>
 			</table>
 		</div>

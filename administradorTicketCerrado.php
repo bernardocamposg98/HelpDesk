@@ -17,7 +17,8 @@ header("location: index.php");
     <a class = "btn btn-danger" href="metodos/pdfCerradoHistorial.php">Reporte Historial Cerrado</a>
     <br>
     <br>
-    <table  class=" tabla table table-striped" id="tablatickets" >
+    <table  class=" tabla table-bordered table-hover table table-striped" id="tablatickets" >
+        <thead class="thead-light">
             <th>ID</th>
             <th>Fecha de apertura</th>
             <th>Usuario de apertura</th>
@@ -34,6 +35,8 @@ header("location: index.php");
         $sel = $con->query("SELECT*FROM tickets WHERE fecha_fin IS NOT NULL and estatus='activo'");
         while ($fila = $sel -> fetch_assoc()) {
         ?>
+            </thead>
+        <tbody>
         <tr>
             <td><?php echo $fila['id']?></td>
             <td><?php echo $fila['fecha_inicio']?></td>
@@ -48,6 +51,7 @@ header("location: index.php");
             <td><?php echo $fila['respuesta']?></td>
             <td><a class="btn btn-warning" href="metodos/pdfIndividualHistorial.php?id=<?php echo $fila['id']?>">PDF</a></td>
         </tr>
+            </tbody>
         <?php } ?>
     </table>
 </div>

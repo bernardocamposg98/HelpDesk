@@ -23,7 +23,7 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Administrador"){
         <br>
         <table class="tabla table tabled-bordered table-hover table-striped" id="tabtoclesp">
             <thead class="thead-light">
-                <tr>
+
                     <th>ID</th>
                     <th>Fecha de apertura</th>
                     <th>Usuario de apertura</th>
@@ -35,7 +35,7 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Administrador"){
                     <th>Respuesta</th>
                     <th>Cerrar</th>
                     <th>PDF</th>
-                </tr>
+              
             </thead>
             <?php
 			$sel = $con->query("SELECT * FROM tickets WHERE fecha_fin IS NULL and estatus='activo'");
