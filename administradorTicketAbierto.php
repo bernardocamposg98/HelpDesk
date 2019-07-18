@@ -13,12 +13,14 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Administrador"){
 <div class="container">
      
   <div class="jumbotron">
-    <h1>Tickets Abiertos</h1>      
+    <h1>Tickets Abiertos <span style="font-size: 40px;"> 
+                <span class=" fas fa-ticket-alt"> </span>
+            </span> </h1>      
     <p>Aqui se podran observar los tickets pendientes por darles solucion.</p>
   </div>
     <div class=" table-responsive">
        
-        <a class="btn btn-success" href="metodos/pdfAbiertoHistorial.php">Reporte Completo</a>
+        <a class="btn btn-success" href="metodos/pdfAbiertoHistorial.php">Reporte Completo <span class="fas fa-file-alt"></span></a>
         <br>
         <br>
         <table class="tabla table tabled-bordered table-hover table-striped" id="tabtoclesp">
@@ -59,9 +61,9 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Administrador"){
                     <input type="hidden" name="tecnico_id" value="<?php echo $_SESSION['id']; ?>">
                     <input type="hidden" name="tecnico_nombre" value="<?php echo $_SESSION['nombre']; ?>">
                     <td>
-                        <button id="btn-signup" type="submit" class="btn btn-danger"><i value="Guardar"></i>Cerrar</button>
+                        <button id="btn-signup" type="submit" class="btn btn-danger"><i value="Guardar"></i>Cerrar <span class="fa fa-close"></span></button>
                     </td>
-                    <td><a class="btn btn-success" href="metodos/pdfIndividualHistorial.php?id=<?php echo $fila['id']?>">PDF</a></td>
+                    <td><a class="btn btn-success" href="metodos/pdfIndividualHistorial.php?id=<?php echo $fila['id']?>">PDF <span class="fas fa-file-alt"></span></a></td>
                 </form>
             </tr>
             <?php } ?>

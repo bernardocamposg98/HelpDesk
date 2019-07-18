@@ -10,11 +10,13 @@ header("location: index.php");
      <?php require_once './secciones/navAdmin.php';?>
      <div class="container">
   <div class="jumbotron">
-    <h1>Tickets Cerrados</h1>      
+    <h1>Tickets Cerrados<span style="font-size: 40px;"> 
+                <span class="fa fa-close"> </span>
+            </span></h1>      
     <p>Aqui se podran observar los tickets que ya se les dio solucion.</p>
   </div>
 <div class="table-responsive ">
-    <a class = "btn btn-danger" href="metodos/pdfCerradoHistorial.php">Reporte Historial Cerrado</a>
+    <a class = "btn btn-success" href="metodos/pdfCerradoHistorial.php">Reporte Cerrado <span class="fas fa-file-alt"></span></a>
     <br>
     <br>
     <table  class=" tabla table-bordered table-hover table table-striped" id="tablatickets" >
@@ -49,7 +51,7 @@ header("location: index.php");
             <td><?php echo $fila['fecha_fin']?></td>
             <td><?php echo $fila['nombre_tecnico']?></td>
             <td><?php echo $fila['respuesta']?></td>
-            <td><a class="btn btn-warning" href="metodos/pdfIndividualHistorial.php?id=<?php echo $fila['id']?>">PDF</a></td>
+            <td><a class="btn btn-success" href="metodos/pdfIndividualHistorial.php?id=<?php echo $fila['id']?>">PDF <span class="fas fa-file-alt"></span></a></td>
         </tr>
             </tbody>
         <?php } ?>

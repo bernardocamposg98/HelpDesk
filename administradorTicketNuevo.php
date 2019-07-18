@@ -11,7 +11,9 @@
 
 <div class="container">
     <div class="jumbotron">
-        <h1>Nuevo Ticket</h1>
+        <h1>Nuevo Ticket <span style="font-size: 40px;"> 
+                <span class=" fas fa-edit"> </span>
+            </span> </h1>
         <p>Aqui se podran dar de alta nuevos Tickets..</p>
     </div>
     <div class="row justify-content-center">
@@ -91,13 +93,13 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="	fas fa-tools"></i></span>
                                     </div>
-                                    <textarea name="problema" rows="10" cols="40" required></textarea>
+                                    <textarea name="problema" rows="10" cols="49" required></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="">
-                                <button id="btn-signup" type="submit" class="form-control btn btn-success" value="Guardar"><i class="icon-hand-right"></i>ENVIAR</button>
+                                <button id="btn-signup" type="submit" class="form-control btn btn-success" value="Guardar"><i class="icon-hand-right"></i>Registrar <span class="fa fa-plus"></span></button>
                             </div>
                         </div>
                     </form>

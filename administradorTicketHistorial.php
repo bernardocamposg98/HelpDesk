@@ -10,12 +10,14 @@ header("location: index.php");
      <?php require_once './secciones/navAdmin.php';?>
 <div class="container">
     <div class="jumbotron">
-    <h1>Historial Tickets</h1>      
+    <h1>Historial Tickets <span style="font-size: 40px;"> 
+                <span class="fas fa-history "> </span>
+            </span> </h1>      
     <p>Aqui se podran observar los todo los Tickets Ingresados en el sistema.</p>
   </div>
 
 <div class="table-responsive">
-    <a class = "btn btn-success" href="metodos/pdfHistorial.php">Reporte Historial Completo</a>
+    <a class = "btn btn-success" href="metodos/pdfHistorial.php">Reporte Completo <span class="fas fa-file-alt"></span></a>
     <br>
     <br>
 
@@ -52,9 +54,9 @@ header("location: index.php");
             <td><?php echo $fila['fecha_fin']?></td>
             <td><?php echo $fila['nombre_tecnico']?></td>
             <td><?php echo $fila['respuesta']?></td>
-            <td><a class="btn btn-warning" href="metodos/pdfIndividualHistorial.php?id=<?php echo $fila['id']?>">PDF</a></td>
-            <td><a class="btn btn-primary" href="administradorTicketModificar.php?id=<?php echo $fila['id']?>">MODIFICAR</a></td>
-            <td><a class="btn btn-danger" href="metodos/eliminarTicket.php?id=<?php echo $fila['id']?>">ELIMINAR</a></td>
+            <td><a class="btn btn-success" href="metodos/pdfIndividualHistorial.php?id=<?php echo $fila['id']?>">PDF <span class="fas fa-file-alt"></span></a></td>
+            <td><a class="btn btn-primary" href="administradorTicketModificar.php?id=<?php echo $fila['id']?>">Modificar <span class="fas fa-edit"></span></a></td>
+            <td><a class="btn btn-danger" href="metodos/eliminarTicket.php?id=<?php echo $fila['id']?>">Eliminar <span class="fas fas fa-trash-alt"></span></a></td>
         </tr>
         <?php } ?>
     </table>
