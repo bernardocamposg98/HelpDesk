@@ -16,6 +16,7 @@ header("location: index.php");
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript">
         function drawChart() {
             // call ajax function to get sports data
@@ -105,7 +106,9 @@ header("location: index.php");
     <br>
     <div class="container">
         <div class="jumbotron">
-            <h1>Tickets Abiertos</h1>
+            <h1>Tickets Abiertos <span style="font-size: 40px;"> 
+                <span class=" fas fa-ticket-alt"> </span>
+            </span></h1>
             <p>Aqui se podran observar los tickets pendientes por darles solucion.</p>
         </div>
         <div class="table-responsive">
@@ -148,7 +151,8 @@ header("location: index.php");
         </div>
         <br>
         <div class="jumbotron">
-            <h1>Tickets Cerrados</h1>
+            <h1>Tickets Cerrados <span style="font-size: 40px;"> 
+                <span class="fa fa-close"> </span></h1>
             <p>Aqui se podran observar los tickets que ya se les dio solucion.</p>
         </div>
         <div class="table-responsive">

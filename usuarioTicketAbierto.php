@@ -11,8 +11,10 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Usuario"){
 <?php require_once './secciones/navUsuario.php';?>
 
 <div class="container">
-    <div class="jumbotron">
-    <h1>Tickets Abiertos</h1>      
+   <div class="jumbotron">
+    <h1>Tickets Abiertos <span style="font-size: 40px;"> 
+                <span class=" fas fa-ticket-alt"> </span>
+            </span> </h1>      
     <p>Aqui se podran observar los tickets pendientes por darles solucion.</p>
   </div>
     <div class="table-responsive">

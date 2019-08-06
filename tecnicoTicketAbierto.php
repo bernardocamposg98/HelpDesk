@@ -9,8 +9,10 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Tecnico"){
 <?php require_once './secciones/header.php';?>
      <?php require_once './secciones/navTecnico.php';?>
 	<div class="container">
-		<div class="jumbotron">
-    <h1>Tickets Abiertos</h1>      
+	 <div class="jumbotron">
+    <h1>Tickets Abiertos <span style="font-size: 40px;"> 
+                <span class=" fas fa-ticket-alt"> </span>
+            </span> </h1>      
     <p>Aqui se podran observar los tickets pendientes por darles solucion.</p>
   </div>
 		<div class="table-responsive">
@@ -46,7 +48,7 @@ if(isset($_SESSION['usuario']) && $_SESSION["tipo_usuario"]=="Tecnico"){
 						<input type="hidden" name="usuario" value="<?php echo $_SESSION['nombre']; ?>" >
 						<input type="hidden" name="id_tecnico" value="<?php echo $_SESSION['id']; ?>" >
 						<td>
-							<button id="btn-signup" type="submit" class="btn btn-primary"><i value = "Guardar" ></i>Cerrar</button>
+							<button id="btn-signup" type="submit" class="btn btn-danger"><i value = "Guardar" ></i>Cerrar    <span class="fa fa-close"> </span></button>
 						</td>
 					</form>
 				</tr>

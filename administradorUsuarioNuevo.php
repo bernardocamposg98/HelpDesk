@@ -79,7 +79,7 @@ session_start();
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="fas fa-at"></i></span>
                                             </div>
-                                            <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                            <input id="email" type="email" class="form-control" name="email" placeholder="Email" required>
                                         </div>
                                     </div>
                                 </div>
@@ -127,11 +127,13 @@ session_start();
 <script src="js/inputmask/dist/bindings/inputmask.binding.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#phone').inputmask("99-9999999"); //static mask
         $('#phone').inputmask({
             "mask": "(999) 999-9999"
         }); //specifying options
-        $('phone').inputmask("9-a{1,3}9{1,3}"); //mask with dynamic syntax
+        $('phone').inputmask("9-a{1,3}9{1,3}"); 
+
+
+})
     });
 
 </script>

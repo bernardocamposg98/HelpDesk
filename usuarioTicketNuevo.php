@@ -10,9 +10,11 @@
 <?php require_once './secciones/navUsuario.php';?>
 
 <div class="container">
-    <div class="jumbotron">
-        <h1>Nuevo Ticket</h1>
-        <p>Aqui se podran dar de alta nuevos Tickets.</p>
+     <div class="jumbotron">
+        <h1>Nuevo Ticket <span style="font-size: 40px;"> 
+                <span class=" fas fa-edit"> </span>
+            </span> </h1>
+        <p>Aqui se podran dar de alta nuevos Tickets..</p>
     </div>
     <div class="row justify-content-center">
         <div id="" style="margin-top:10px" class="mainbox col-md-10 col-lg-10 col-xl-6 col-sm-12">
@@ -91,13 +93,13 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="	fas fa-tools"></i></span>
                                     </div>
-                                    <textarea name="problema" rows="10" cols="60" required></textarea>
+                                    <textarea name="problema" rows="10" cols="45" required></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="">
-                                <button id="btn-signup" type="submit" class="form-control btn btn-success" value="Guardar"><i class="icon-hand-right"></i>ENVIAR</button>
+                                <button id="btn-signup" type="submit" class="form-control btn btn-success" value="Guardar"><i class="icon-hand-right"></i>Registrar <span class="fa fa-plus"></span></button>
                             </div>
                         </div>
                     </form>

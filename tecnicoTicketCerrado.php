@@ -11,9 +11,11 @@ header("location: index.php");
 
 <div class="container">
     <div class="jumbotron">
-        <h1>Tickets Cerrados</h1>
-        <p>Aqui se podran observar los tickets que ya se les dio solucion.</p>
-    </div>
+    <h1>Tickets Cerrados<span style="font-size: 40px;"> 
+                <span class="fa fa-close"> </span>
+            </span></h1>      
+    <p>Aqui se podran observar los tickets que ya se les dio solucion.</p>
+  </div>
     <div class="table-responsive ">
         <table class="tabla table-bordored table-hover table table-striped" id="tablatickets">
             <thead class="thead-light">
